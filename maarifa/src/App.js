@@ -40,6 +40,32 @@ const navbarLinks = [
   { linkName: "Travel", to: "#" },
 ];
 
+const mainFeaturedPost = {
+  title: "MOMENTUM",
+  description: "A Maarifa blog about the fight against anti-Black racism",
+  link: "Read Now",
+  imageURL:
+    "https://images.unsplash.com/photo-1591625832222-fe58485f590e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+};
+
+const featuredPost = [
+  {
+    title:
+      "15 Tools to Increase your Productivity as a (UI/UX) Designer in 2020",
+    date: "Jul 27",
+    description: "The remote-friendly edition of a designer toolkit",
+    imageURL: "https://source.unsplash.com/random",
+    link: "Continue Reading",
+  },
+  {
+    title: "10 Principles for Color Usage in UI Design",
+    date: "Jul 13",
+    description: "Best practices, tips, and terminology for using color in UI.",
+    imageURL: "https://source.unsplash.com/random",
+    link: "Continue Reading",
+  },
+];
+
 function App() {
   return (
     <React.Fragment>
@@ -49,16 +75,13 @@ function App() {
         <Navbar navbarLinks={navbarLinks} />
         <main>
           <section>
-            <Grid container>
-              <Grid item xs="12">
-                <MainFeatured />
-              </Grid>
-              <Grid item xs="12" md="6">
-                <Featured />
-              </Grid>
-              <Grid item xs="12" md="6">
-                <Featured />
-              </Grid>
+          <MainFeatured mainFeaturedPost={mainFeaturedPost} />
+            <Grid container spacing={2}>
+              {featuredPost.map((post) => (
+                <Grid item xs="12" md="6">
+                  <Featured key={post.title} post={post} />
+                </Grid>
+              ))}
             </Grid>
           </section>
           <section>
