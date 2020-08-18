@@ -14,6 +14,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import post1 from "./blog-post.1.md";
 import post2 from "./blog-post.2.md";
 import post3 from "./blog-post.3.md";
+import Footer from "./components/footer/Footer";
 
 const headerInfo = {
   title: "Maarifa Blog",
@@ -104,7 +105,11 @@ const asideInfo = {
   }
 }
 
-
+const footerInfo = {
+  title: "Maarifa",
+  description: "We are ready to learn more about you and your needs",
+  copyright: "Copyright © Maarifa 2020."
+}
 
 function App() {
   return (
@@ -136,6 +141,7 @@ function App() {
           </section>
         </main>
       </Container>
+      <Footer footerInfo={footerInfo}></Footer>
     </React.Fragment>
   );
 }
