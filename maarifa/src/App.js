@@ -8,9 +8,12 @@ import Featured from "./components/featuredPost/Featured";
 import MainPost from "./components/mainBlogPost/MainPost";
 import Aside from "./components/aside/Aside";
 import Navbar from "./components/navigation/Navbar";
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import post1 from "./blog-post.1.md";
+import post2 from "./blog-post.2.md";
+import post3 from "./blog-post.3.md";
 
 const headerInfo = {
   title: "Maarifa Blog",
@@ -71,6 +74,38 @@ const featuredPost = [
 
 const posts = [post1, post2, post3];
 
+const asideInfo = {
+  about: {
+    title: "About",
+    description:
+      "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
+  },
+  archives: {
+    title: "Archives",
+    archiveLinks: [
+      {title: 'August 2020',to:'/'},
+      {title: 'July 2020',to:'/'},
+      {title: 'Jun 2020',to:'/'},
+      {title: 'May 2020',to:'/'},
+      {title: 'April 2020',to:'/'},
+      {title: 'March 2020',to:'/'},
+      {title: 'February 2020',to:'/'},
+      {title: 'January 2020',to:'/'},
+      {title: 'December 2019',to:'/'},
+    ]
+  },
+  socials: {
+    title: "Social Media",
+    socialLinks: [
+      {title: 'GitHub',to:'/',icon:GitHubIcon},
+      {title: 'Twitter',to:'/', icon:TwitterIcon},
+      {title: 'Facebook',to:'/', icon:FacebookIcon}
+    ]
+  }
+}
+
+
+
 function App() {
   return (
     <React.Fragment>
@@ -80,7 +115,7 @@ function App() {
         <Navbar navbarLinks={navbarLinks} />
         <main>
           <section>
-          <MainFeatured mainFeaturedPost={mainFeaturedPost} />
+            <MainFeatured mainFeaturedPost={mainFeaturedPost} />
             <Grid container spacing={2}>
               {featuredPost.map((post) => (
                 <Grid item xs="12" md="6">
@@ -95,7 +130,7 @@ function App() {
                 <MainPost title="From the firehose" posts={posts} />
               </Grid>
               <Grid item xs="12" md="4">
-                <Aside />
+                <Aside asideInfo={asideInfo}/>
               </Grid>
             </Grid>
           </section>

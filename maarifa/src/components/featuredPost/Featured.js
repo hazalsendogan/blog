@@ -16,13 +16,15 @@ const useStyles = makeStyles(()=>({
         alignItems: 'stretch'
     },
     cardTitle: {
-        lineHeight:1.2
-    },
+      lineHeight:1.5
+  },
+   
     cardContent: {
         flex:1,
     },
     cardMedia: {
-        width: '100px'
+        width: '150px',
+        height: '200px'
     }
 }))
 
