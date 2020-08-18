@@ -8,6 +8,9 @@ import Featured from "./components/featuredPost/Featured";
 import MainPost from "./components/mainBlogPost/MainPost";
 import Aside from "./components/aside/Aside";
 import Navbar from "./components/navigation/Navbar";
+import post1 from './blog-post.1.md';
+import post2 from './blog-post.2.md';
+import post3 from './blog-post.3.md';
 
 const headerInfo = {
   title: "Maarifa Blog",
@@ -66,6 +69,8 @@ const featuredPost = [
   },
 ];
 
+const posts = [post1, post2, post3];
+
 function App() {
   return (
     <React.Fragment>
@@ -87,7 +92,7 @@ function App() {
           <section>
             <Grid container>
               <Grid item xs="12" md="8">
-                <MainPost />
+                <MainPost title="From the firehose" posts={posts} />
               </Grid>
               <Grid item xs="12" md="4">
                 <Aside />
