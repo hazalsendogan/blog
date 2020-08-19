@@ -4,13 +4,18 @@ import { Toolbar, Typography, makeStyles, Link } from '@material-ui/core'
 
 const useStyles = makeStyles(()=>({
     toolbarContainer: {
-        borderBottom: '1px solid #2B2B2B'
+        borderBottom: '1px solid #6554C0'
     },
     toolbarTitle: {
+        fontFamily: 'Nunito',
         flex: 1
     },
     toolbarLink: {
-        paddingRight: '10px'
+        paddingRight: '10px',
+        fontFamily: 'Nunito',
+        '&:last-child': {
+            paddingRight: 0
+        }
     }
 }))
 
@@ -23,13 +28,13 @@ function Header(props) {
                 <Typography variant="h6" color="primary" className={classes.toolbarTitle}>
                     {props.headerInfo.title}
                 </Typography>
-                <Typography color="primary">
+                <div>
                     {
                         props.headerInfo.menuLink.map(link => (
-                        <Link to={link.to} className={classes.toolbarLink}>{link.linkName}</Link>
+                        <Link key={link.linkName} className={classes.toolbarLink}>{link.linkName}</Link>
                         ))
                     }
-                </Typography>
+                </div>
             </Toolbar>
         </header>
     )

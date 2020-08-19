@@ -1,5 +1,5 @@
 import React from 'react'
-import { Toolbar, Typography, Link, makeStyles } from '@material-ui/core'
+import { Toolbar, Link, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(()=>({
     navLinks: {
@@ -10,7 +10,8 @@ const useStyles = makeStyles(()=>({
         width: '100%'
     },
     navLink: {
-        color: '#2B2B2B'
+        color: '#6554C0',
+        fontFamily: 'Nunito',
     }
 }))
 
@@ -20,13 +21,13 @@ export default function Navbar(props) {
     return (
         <div>
             <Toolbar>
-                <Typography className={classes.navLinks}>
+                <div className={classes.navLinks}>
                     {
                         props.navbarLinks.map(link => (
-                        <Link to={link.to} className={classes.navLink}>{link.linkName}</Link>
+                        <Link key={link.linkName} className={classes.navLink}>{link.linkName}</Link>
                         ))
                     }
-                </Typography>
+                </div>
             </Toolbar>
         </div>
     )
