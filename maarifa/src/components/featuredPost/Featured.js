@@ -38,8 +38,8 @@ export default function Featured(props) {
           <div className={classes.details}>
             <CardContent className={classes.cardContent}>
               <Typography variant="h6" className={classes.cardTitle}>{props.post.title}</Typography>
-              <Typography variant="subtitle1" className={classes.cardTitle}>{props.post.description}</Typography>
-              <Typography variant="subtitle2" className={classes.cardTitle}>{props.post.date}</Typography>
+              <Typography variant="subtitle1" className={classes.cardTitle} color="textSecondary">{props.post.description}</Typography>
+              <Typography variant="subtitle2" className={classes.cardTitle} color="textSecondary">{props.post.date}</Typography>
               <Link>{props.post.link}</Link>
             </CardContent>
           </div>

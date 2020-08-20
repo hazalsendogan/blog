@@ -40,6 +40,10 @@ const theme = createMuiTheme({
     danger: {
       main: "#FF3131",
     },
+    text: {
+      primary: '#2B2B2B',
+      secondary: '#737373'
+    }
   },
   typography: {
     fontFamily: 'Nunito',
@@ -64,7 +68,7 @@ const theme = createMuiTheme({
     subtitle1: {
       fontSize: '16px'
     }
-  }
+  },
 });
 const headerInfo = {
   title: "Maarifa Blog",
@@ -177,7 +181,7 @@ function App() {
               </Grid>
             ))}
           </Grid>
-          <Grid container>
+          <Grid container spacing={2}>
             <Grid item sm="12" md="8">
               <MainPost title="From the firehose" posts={posts} />
             </Grid>
