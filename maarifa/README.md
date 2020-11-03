@@ -1,3 +1,15 @@
+# Getting Started with json-server
+## Install JSON Server
+
+`npm install -g json-server`
+
+## Start JSON Server
+
+cd api
+`json-server --watch data.json`
+
+# Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
